@@ -12,24 +12,23 @@ fdsa;kfjaskjf;asdkjfads
 asdkfl;dksaf;'sadkf'sd
 sakdflkasd;flsa'df;lksda;f
 
-<div class="smodal">
-  <div class="smodal-overlay">
-    <div class="smoda-wrap">
-      <div class="smodal-header">
-        <span class="smodal-header__title">Modal</span>
-        <span class="smodal-title__close">&times;</span>
-      </div>
-      <div class="smodal-body">
-        Body
-      </div>
-      <div class="smodal-footer">
-        <button>ОК</button>
-        <button>Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script src="lib/modal/js/modal.js"></script>
+<script>
+  const modal = smodal.create({
+    title: 'My Modal',
+    closable: true,
+    content: `hsfdkjsahkfjashkfjhsadk`,
+    buttons: [
+      {text: 'OK', type: 'primary', handler: () => {
+          console.log('Primary')
+        }
+      },
+      {text: 'Cancel', type: 'danger', handler: () => {
+          console.log('Danger')
+        }
+      },
+    ]
+  })
+</script>
 </body>
 </html>

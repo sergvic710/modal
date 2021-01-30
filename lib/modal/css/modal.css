@@ -1,3 +1,17 @@
+.smodal  {}
+
+.smodal-overlay,
+.smodal-wrap{
+    opacity: 0;
+    z-index: -1;
+}
+
+.smodal.open .smodal-overlay,
+.smodal.open .smodal-wrap {
+    opacity: 1;
+    z-index: 9999;
+}
+
 .smodal-overlay {
     position: fixed;
     top: 0;
@@ -6,7 +20,7 @@
     right: 0;
     background: rgba(0, 0, 0, .5);
 }
-.smoda-wrap {
+.smodal-wrap {
     background: #ffff;
     width: 500px;
     position: relative;
@@ -19,4 +33,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.smodal-title__close {
+    cursor: pointer;
 }
